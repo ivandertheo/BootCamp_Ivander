@@ -1,4 +1,4 @@
-class User {
+class Usertest {
     constructor(nama, umur, jumlahUang, gender) {
         this.nama = nama;
         this.umur=umur;
@@ -13,13 +13,9 @@ class User {
     }
 }
 
-const ivan = new User("ivander", 20, 20000, "laki-laki");
+const ivan = new Usertest("ivander", 20, 20000, "laki-laki");
 
 ivan.tambahUang(1000);
 console.log(ivan);
 ivan.kurangUang(1000);
 console.log(ivan);
-
-const saldo => () {
-    
-}
