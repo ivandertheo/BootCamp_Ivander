@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter Wilayah Bertingkat (ParentId)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        select {
+            display: block;
+            margin-bottom: 20px;
+            padding: 8px;
+            width: 300px;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Filter Wilayah (Relasi ParentId)</h2>
+
+<label>Provinsi</label>
+<select id="provinsi">
+    <option value="">-- Pilih Provinsi --</option>
+</select>
+
+<label>Kabupaten / Kota</label>
+<select id="kabupaten" disabled>
+    <option value="">-- Pilih Kabupaten/Kota --</option>
+</select>
+
+<label>Kecamatan</label>
+<select id="kecamatan" disabled>
+    <option value="">-- Pilih Kecamatan --</option>
+</select>
+
+<script>
+    // ========================
+    // DATA MODEL (FLAT + PARENT ID)
+    // ========================
+
+    const provinsi = [
+        { id: 1, name: "Provinsi A" },
+        { id: 2, name: "Provinsi B" },
+        { id: 3, name: "Provinsi C" }
+    ];
+
+    const kabupaten = [
+        { id: 11, parentId: 1, name: "Kabupaten A1" },
+        { id: 12, parentId: 1, name: "Kabupaten A2" },
+        { id: 13, parentId: 1, name: "Kabupaten A3" },
+
+        { id: 21, parentId: 2, name: "Kabupaten B1" },
+        { id: 22, parentId: 2, name: "Kabupaten B2" },
+        { id: 23, parentId: 2, name: "Kabupaten B3" },
+
+        { id: 31, parentId: 3, name: "Kabupaten C1" },
+        { id: 32, parentId: 3, name: "Kabupaten C2" },
+        { id: 33, parentId: 3, name: "Kabupaten C3" }
+    ];
+
+    const kecamatan = [
+        { id: 111, parentId: 11, name: "Kecamatan A1-1" },
+        { id: 112, parentId: 11, name: "Kecamatan A1-2" },
+        { id: 113, parentId: 11, name: "Kecamatan A1-3" },
+
+        { id: 121, parentId: 12, name: "Kecamatan A2-1" },
+        { id: 122, parentId: 12, name: "Kecamatan A2-2" },
+        { id: 123, parentId: 12, name: "Kecamatan A2-3" },
+
+        { id: 131, parentId: 13, name: "Kecamatan A3-1" },
+        { id: 132, parentId: 13, name: "Kecamatan A3-2" },
+        { id: 133, parentId: 13, name: "Kecamatan A3-3" },
+
+        { id: 211, parentId: 21, name: "Kecamatan B1-1" },
+        { id: 212, parentId: 21, name: "Kecamatan B1-2" },
+        { id: 213, parentId: 21, name: "Kecamatan B1-3" },
+
+        { id: 221, parentId: 22, name: "Kecamatan B2-1" },
+        { id: 222, parentId: 22, name: "Kecamatan B2-2" },
+        { id: 223, parentId: 22, name: "Kecamatan B2-3" },
+
+        { id: 231, parentId: 23, name: "Kecamatan B3-1" },
+        { id: 232, parentId: 23, name: "Kecamatan B3-2" },
+        { id: 233, parentId: 23, name: "Kecamatan B3-3" },
+
+        { id: 311, parentId: 31, name: "Kecamatan C1-1" },
+        { id: 312, parentId: 31, name: "Kecamatan C1-2" },
+        { id: 313, parentId: 31, name: "Kecamatan C1-3" },
+
+        { id: 321, parentId: 32, name: "Kecamatan C2-1" },
+        { id: 322, parentId: 32, name: "Kecamatan C2-2" },
+        { id: 323, parentId: 32, name: "Kecamatan C2-3" },
+
+        { id: 331, parentId: 33, name: "Kecamatan C3-1" },
+        { id: 332, parentId: 33, name: "Kecamatan C3-2" },
+        { id: 333, parentId: 33, name: "Kecamatan C3-3" }
+    ];
+
+    const provinsiSelect = document.getElementById("provinsi");
+    const kabupatenSelect = document.getElementById("kabupaten");
+    const kecamatanSelect = document.getElementById("kecamatan");
+
+    // init provinsi
+    provinsi.forEach(p => {
+        provinsiSelect.add(new Option(p.name, p.id));
+    });
+
+    provinsiSelect.addEventListener("change", function () {
+        const provinsiId = parseInt(this.value);
+
+        reset(kabupatenSelect, "-- Pilih Kabupaten/Kota --");
+        reset(kecamatanSelect, "-- Pilih Kecamatan --");
+
+        kabupatenSelect.disabled = true;
+        kecamatanSelect.disabled = true;
+
+        if (!provinsiId) return;
+
+        kabupaten
+            .filter(k => k.parentId === provinsiId)
+            .forEach(k => kabupatenSelect.add(new Option(k.name, k.id)));
+
+        kabupatenSelect.disabled = false;
+    });
+
+    kabupatenSelect.addEventListener("change", function () {
+        const kabupatenId = parseInt(this.value);
+
+        reset(kecamatanSelect, "-- Pilih Kecamatan --");
+        kecamatanSelect.disabled = true;
+
+        if (!kabupatenId) return;
+
+        kecamatan
+            .filter(k => k.parentId === kabupatenId)
+            .forEach(k => kecamatanSelect.add(new Option(k.name, k.id)));
+
+        kecamatanSelect.disabled = false;
+    });
+
+    function reset(select, placeholder) {
+        select.innerHTML = `<option value="">${placeholder}</option>`;
+    }
+</script>
+
+</body>
+</html>

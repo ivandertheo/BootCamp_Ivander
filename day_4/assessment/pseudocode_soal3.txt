@@ -1,0 +1,13 @@
+Function Main
+    Declare Integer nilai, pangkat
+
+    For nilai = 1 to 5
+        For pangkat = 1 to 3
+            Declare Integer hasil
+
+            Assign hasil = nilai^pangkat
+            Output nilai & " pangkat " & pangkat & " = " & hasil
+        End
+        Output "==============================="
+    End
+End

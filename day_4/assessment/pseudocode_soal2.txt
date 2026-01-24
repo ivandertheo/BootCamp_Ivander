@@ -1,0 +1,50 @@
+Function Main
+    Declare Integer nilaiLength
+
+    Assign nilaiLength = 5
+    Declare Real Array nilai[nilaiLength]
+
+    Assign nilai[0] = 85
+    Assign nilai[1] = 95.20
+    Assign nilai[2] = 67.75
+    Assign nilai[3] = 78
+    Assign nilai[4] = 75
+    Call mean(nilai,nilaiLength)
+End
+
+Function grade (Real mean)
+    Declare Integer i
+    Declare String grade
+
+    If mean>=90 && mean<=100
+        Assign grade = "A"
+    Else
+        If mean>=80 && mean <=89.99
+            Assign grade = "B"
+        Else
+            If mean >=75 && mean <=79.99
+                Assign grade = "C"
+            Else
+                If mean >= 60 && mean <=774.99
+                    Assign grade = "D"
+                Else
+                    Assign grade = "E"
+                End
+            End
+        End
+    End
+    Output "grade: " & grade
+End
+
+Function mean (Real Array nilai, Integer nilaiLength)
+    Declare Integer i
+    Declare Real mean
+
+    Assign mean = 0
+    For i = 0 to nilaiLength-1
+        Assign mean = mean+nilai[i]
+    End
+    Assign mean = mean/nilaiLength
+    Output "rata-rata: " & mean
+    Call grade(mean)
+End

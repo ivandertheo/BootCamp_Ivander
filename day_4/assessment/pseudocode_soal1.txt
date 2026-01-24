@@ -1,0 +1,30 @@
+Function Main
+    Declare Integer i
+
+    For i = 1 to 20
+        If i%2==0
+            Output i & " merupakan bilangn genap"
+        Else
+            Output i & " merupakan bilangan ganjil"
+        End
+        If i%4==0
+            Output i & " habis dibagi dengan 4"
+        Else
+            If i%6==0
+                Output i & " habis dibagi dengan 6"
+            Else
+                If i%4==0 && i%6==0
+                    Output i & " habis dibagi dengan 4 dan 6"
+                Else
+                    Output i
+                End
+            End
+        End
+        If i%3==0 || i%5==0
+            Output i & " habis dibagi dengan 3 atau 5"
+        Else
+            Output "bilangan " & i & " tidak habis dibagi 3 dan 5"
+        End
+        Output "==============================="
+    End
+End
