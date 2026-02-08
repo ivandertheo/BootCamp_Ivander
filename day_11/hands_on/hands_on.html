@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Wisata Indonesia</title>
+</head>
+<body>
+    <header>
+        <h1>Galeri Wisata Indonesia</h1>
+        <p>Jelajahi keindahan alam dan budaya Indonesia melalui koleksi foto, video, dan audio yang kami kumpulkan dari berbagai penjuru nusantara.</p>
+        <nav>
+            <a href="#container_foto">Galeri Foto</a>
+            |
+            <a href="#container_video">Video</a>
+            |
+            <a href="#container_audio">Audio</a>
+            |
+            <a href="#container_youtube">Video Youtube</a>
+            <hr>
+        </header>
+    <section id="container_foto">
+        <h2>Galeri Foto</h2>
+        <p>Koleksi foto pemandangan alam Indonesia yang memukau.</p>
+        <figure>
+            <img 
+            src="https://picsum.photos/400/300?random=1" 
+            alt="Pemandangan gunung di pagi hari">
+            <figcaption>
+                <strong>Gunung Bromo, Jawa Timur</strong>
+                <br>Pemandangan matahari terbit di Gunung Bromo yang ikonik.
+            </figcaption>
+        </figure>
+        <figure>
+            <img 
+            src="https://picsum.photos/400/300?random=2" 
+            alt="Pemandangan gunung di pagi hari">
+            <figcaption>
+                <strong>Raja Ampat, Papua Barat</strong>
+                <br>Keindahan bawah laut Raja Ampat yang mendunia.
+            </figcaption>
+        </figure>
+        <figure>
+            <img 
+            src="https://picsum.photos/400/300?random=3" 
+            alt="Pemandangan gunung di pagi hari">
+            <figcaption>
+                <strong>Tegallalang, Bali</strong>
+                <br>Terasering sawah yang menjadi warisan budaya UNESCO.
+            </figcaption>
+        </figure>
+        <figure>
+            <img 
+            src="https://picsum.photos/400/300?random=4" 
+            alt="Pemandangan gunung di pagi hari">
+            <figcaption>
+                <strong>Taman Nasional Gunung Leuser, Sumatera</strong>
+                <br>Habitat alami orangutan Sumatera yang dilindungi.
+            </figcaption>
+        </figure>
+    </section>
+    <hr>
+    <section id="container_video">
+        <h2>Video</h2>
+        <p>Tonton video dokumentasi wisata Indonesia.</p>
+        <video width="640" height="360" controls>
+            <source src="https://cdn.pixabay.com/video/2020/04/24/37079-413229597_large.mp4" type="video/mp4">
+        </video>
+        <p>
+            <em>Video: Keindahan Alam Indonesia</em>
+        </p>
+    </section>
+    <hr>
+    <section id="container_audio">
+        <h2>Audio</h2>
+        <p>Dengarkan musik tradisional dan suara alam Indonesia.</p>
+        <h3>Gamelan Jawa</h3>
+        <audio controls>
+            <source src="gamelan.mp3" type="audio/mpeg">
+        </audio>
+        <p>
+            <em>Musik gamelan tradisional dari Jawa Tengah</em>
+        </p>
+    </section>
+    <hr>
+    <section id="container_youtube">
+        <h2>Video Youtube</h2>
+        <p>Video pilihan tentang wisata Indonesia dari YouTube.</p>
+        <div id="video-container" style="position:relative;width:560px;height:315px;cursor:pointer">
+            <img src="https://picsum.photos/seed/anime/560/315" 
+            alt="Video thumbnail"
+            style="width:100%;height:100%;object-fit:cover">
+            <button id="play-button"
+            style="position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:180px;height:60px;border-radius:10px;background-color:rgba(255, 0, 0, 0.8);border:none;cursor:pointer;font-size:16px;font-weight:bold;color:white;display:flex;align-items:center;justify-content:center">
+            PLEASE CLICK ME
+            </button>
+        </div>
+    </section>
+    <hr>
+    <aside>
+        <h3>Informasi Tambahan</h3>
+        <p>Indonesia memiliki lebih dari 17.000 pulau dengan keanekaragaman alam dan budaya yang luar biasa. Dari Sabang sampai Merauke, setiap daerah memiliki keunikan tersendiri yang layak untuk dijelajahi.</p>
+        <h4>Fakta Menarik:</h4>
+        <ul>
+            <li>Indonesia memiliki 6 situs Warisan Dunia UNESCO</li>
+            <li>Terdapat lebih dari 700 bahasa daerah</li>
+            <li>Rumah bagi 12% spesies mamalia dunia</li>
+        </ul>
+    </aside>
+    <hr>
+    <footer>
+        <p><strong>Credit Foto:</strong> Semua foto diambil dari <a href="https://picsum.photos/" target="_blank">Lorem Picsum</a> untuk keperluan demonstrasi.</p>
+        <a href="" target="_top">↑ Kembali ke Atas</a>
+        <p>
+            <small>© 2024 Galeri Wisata Indonesia. Dibuat untuk latihan HTML.</small>
+        </p>
+    </footer>
+    <script>
+        document.getElementById('play-button').addEventListener('click', function() {
+            document.getElementById('container_youtube').innerHTML = '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?si=emSA4yeS0Z3RQk0S&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+
+ada 2 class:
+- laki
+  - getTB (tinggi badan)
+  - get BBI (berat badan ideal)
+- perempuan
+  - getTB
+  - get BBI
+
+gunakan konsep inheritance untuk mengerjakan soal di atas
+
+rumus BBI Broca :
+Pria: Berat badan ideal (kilogram) = [tinggi badan (sentimeter) – 100] – [(tinggi badan (sentimeter) – 100) x 10 persen]
+Wanita: Berat badan ideal (kilogram) = [tinggi badan (sentimeter) – 100] – [(tinggi badan (sentimeter) – 100) x 15 persen]

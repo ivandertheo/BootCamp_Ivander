@@ -1,0 +1,91 @@
+/* Footer Styles */
+/* File ini berisi seluruh styling untuk footer */
+/* Pemisahan ini dilakukan supaya mudah untuk diatur, dimaintain dan juga menemukan style mana yang "menimpa" satu sama lain */
+
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 30px 20px 25px;
+    margin-top: 40px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+    justify-content: flex-start;
+}
+
+.footer-section {
+    flex: 0 1 auto;
+    min-width: 150px;
+}
+
+.footer-section h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #ff3366;
+    padding-left: 5px;
+}
+.footer-categories {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding: 0;
+    margin: 0 0 0 18px;
+    text-align: left;
+}
+
+.footer-categories li {
+    color: #999;
+    margin-bottom: 8px;
+    font-size: 13px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-categories li:hover {
+    color: #ccc;
+}
+@media (max-width: 1200px) {
+    .footer-content {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+@media (max-width: 480px) {
+    .footer-content {
+        gap: 40px;
+    }
+}

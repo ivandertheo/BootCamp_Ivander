@@ -1,0 +1,301 @@
+/* Content Styles */
+/* File ini berisi seluruh styling untuk content */
+/* Pemisahan ini dilakukan supaya mudah untuk diatur, dimaintain dan juga menemukan style mana yang "menimpa" satu sama lain */
+
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.info-notice {
+    background-color: #2a2a2a;
+    padding: 12px 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 51, 102, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+.info-notice:hover {
+    border-bottom-color: rgba(255, 51, 102, 0.6);
+}
+
+.notice-icon {
+    float: left;
+    width: 18px;
+    height: 18px;
+    background-color: #ff3366;
+    border-radius: 50%;
+    margin-right: 12px;
+    margin-top: 2px;
+    position: relative;
+}
+
+.notice-text {
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.notice-text strong {
+    color: #fff;
+    font-weight: 600;
+    margin-right: 8px;
+}
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+}
+.manga-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    grid-auto-flow: dense;
+}
+.manga-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    padding-top: 140%;
+}
+
+.manga-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.manga-card.featured {
+    grid-column: span 2;
+    grid-row: span 1;
+    padding-top: 60%;
+}
+
+.manga-card.banner {
+    grid-column: span 3;
+    grid-row: span 1;
+    padding-top: 30%;
+}
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.manga-card:hover .card-image img {
+    transform: scale(1.05);
+}
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.7) 60%,
+            transparent 100%);
+    padding: 20px 15px 15px;
+    color: #fff;
+}
+
+.banner .card-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.5) 100%);
+}
+.new-badge {
+    display: inline-block;
+    background-color: #e53935;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.card-subtitle {
+    font-size: 13px;
+    color: #ccc;
+    font-weight: 400;
+}
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+#hottest-sidebar {
+    animation: fadeIn 0.5s ease-in;
+}
+.sidebar-header {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.sidebar-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+.sidebar-list {
+    background-color: #2a2a2a;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+.sidebar-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-item:last-child {
+    border-bottom: none;
+}
+
+.sidebar-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.sidebar-thumbnail {
+    flex-shrink: 0;
+    width: 50px;
+    height: 70px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.sidebar-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.sidebar-info p {
+    font-size: 12px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-align: left;
+}
+.view-count-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAxCAYAAACcXioiAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKMSURBVHgB7ZmLUeMwEIY3V0E6OJWQEtzBcR24hOsg6YB0QDqAq8BQQaAChQpCB4uExbBZrxwp0hozk2/GM4qtx6721zMAV65cucJBxMY9N/ATcYa3+MUdKPML6mNI2jvzDxTRcGDJft86JwwooeHAb+GdupSq4XrbokwDc8cZuWJGH0m6g7njZx1isPUDmDm0hLniByqeysc7s2RRUJ2RinDG3bLeNuH9bvYyErR/R77Rhe0Ic0OQjkUy74fvg8jMgqBxywxshXx0HDQwB4Lxe2b8JpLXjjk4ORHjdyP57ZkI+fqaSeSVa3woMyohUp9Vd8I10GUazwfxin1fs+97UDR+nWN8KBOdRgXnPtlAbYTGknqKReyB1WcxjoGaMENsSgOs9z034b04g6HW5g/7GYLSJpazrNzHWVl4vw35Nzw/1ADZLjOj3BHPsyP5+eZvC6XgUPttRtkVjut8K5ShUfDOlG3BcajjrApDr/pzAdV8hxF5CFFooQQ8lc8k22E8nTBGz9Mph3pD0k8wDf9JuuyCjIVzkts2YdxFZZsSAVr4DaaBt2NiGTXuhYpZLBbcgaIIvKVUVBNBModY3hQHDiRtYBpOdqwuIodYxhQHXkj6D0wDnSyeoYTShezCNi2OrNa5lfGVcQOKCB22glJwuD8xoAAObznqrPxCFPYaUsLh7V4DtcDhRW3VO38cHlfr/6fgKr1njdzXkJPQ81YjwrGjoG+shQvA/oQm1WdAi4gTng77GeRszwXDO6EOm2v8Ai4E++l0Hfn8CP0C9Ar9VsQ75f87M+5pQN6S+DJ/hX2QHnj+yJjCEb/7vjRIp8M8OuxntqLBerGEJIIxTXi8ZPhZwkvKS+uhllTeAfI/HO3HOGN4AAAAAElFTkSuQmCC");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 0;
+    }
+
+    .sidebar-item {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+@media (max-width: 1024px) {
+    .manga-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .manga-card.banner {
+        grid-column: span 2;
+    }
+}
+@media (max-width: 768px) {
+    .manga-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    .manga-card.featured {
+        grid-column: span 2;
+    }
+
+    .manga-card.banner {
+        grid-column: 1 / -1;
+    }
+
+    .card-overlay {
+        padding: 15px 10px 10px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .banner-title {
+        font-size: 18px;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+}

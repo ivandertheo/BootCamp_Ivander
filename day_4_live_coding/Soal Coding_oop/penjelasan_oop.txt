@@ -1,0 +1,55 @@
+
+inheritance
+
+polimorphism
+
+---------------------------------------------------------------------------------------------------
+abstaction atau interface
+- skema dari class, hanya menampilkan nama-nama method
+
+nanti di class yang mengimplementasikan interface
+- harus menyertakan semua isi dari interfacenya
+
+kegunaan lain:
+- interface bisa sebagai "bentuk simpel" dari isi class yang bisa ratusan - ribuan baris
+- contoh kasusnya, programmer mau mengetahui, "class ini bisa ngapain aja sih?"
+- report jika harus scroll-scroll kodingan, ini salah satu keuntungan interface
+- cukup liat interfacenya untuk mendapatkan list method
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+encapsulation
+- private
+- public
+
+private: properti
+public: getProperti/setPropertinya
+
+Class Mahasiswa
++ ExportDataToExcel() {
+
+    - step 1: get data mahasiswanya
+    - step 2: generate template excelnya
+    - step 3: memasukkan data mahasiswa ke excelnya
+
+    getAllMahasiswa()
+
+    generateExcelMahasiswa()
+
+    mappingMahasiswaToExcel()
+}
++ MethodLain(){
+    generateExcelMahasiswa()
+}
+
+private methodnya (anggap saja sub-proses)
+- getAllMahasiswa()
+- generateExcelMahasiswa()
+- mappingMahasiswaToExcel()
+
+
+di tempat lain
+Mahasiswa.ExportDataToExcel

@@ -1,0 +1,44 @@
+body {
+    font-family:"Merriweather",serif;
+}
+
+h2 {
+    font-size:22px;
+    color:#2c3e50;
+}
+p {
+    font-size:16px;
+    color:#333;
+}
+.judul-artikel {
+    font-weight: bold;
+    font-style:italic;
+}
+.highlight{
+    color:#e67e22;
+    font-weight:bold;
+}
+.tagline {
+    font-size:14px;
+    text-align:center;
+}
+.daftar-topik {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+#judul-blog{
+    text-align:center;
+    font-size:32px;
+    color:#1a5276;
+}
+#copyright {
+    text-align:center;
+    font-size:12px;
+    color:#999;
+}
+p {
+    color:green;
+}
+.highlight{
+    color:#e67e22;
+}
