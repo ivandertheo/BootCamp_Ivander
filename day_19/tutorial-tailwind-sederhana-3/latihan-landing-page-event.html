@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFest 2026 - Landing Page Event Teknologi</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --animate-fade-in: fade-in 0.8s ease-out;
+            --animate-slide-up: slide-up 0.6s ease-out;
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @layer components {
+            .btn-event {
+                @apply bg-white text-violet-900 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 active:scale-95 transition duration-200;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white antialiased animate-fade-in">
+    <!-- Navbar -->
+    <nav class="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50 select-none">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 flex justify-between items-center h-16">
+            <span class="text-xl font-bold text-violet-700 tracking-tight">TechFest 2026</span>
+            <div class="hidden md:flex gap-6">
+                <a href="#speakers" class="text-sm text-gray-600 hover:text-violet-700 transition-colors duration-200">Speakers</a>
+                <a href="#schedule" class="text-sm text-gray-600 hover:text-violet-700 transition-colors duration-200">Schedule</a>
+                <a href="#sponsors" class="text-sm text-gray-600 hover:text-violet-700 transition-colors duration-200">Sponsors</a>
+                <a href="#register" class="text-sm text-gray-600 hover:text-violet-700 transition-colors duration-200">Register</a>
+            </div>
+            <div class="md:hidden text-2xl text-gray-600 cursor-pointer">☰</div>
+        </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-violet-900 via-purple-800 to-indigo-900 py-16 md:py-24 px-4 md:px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <!-- Hero Text Content -->
+            <div class="flex-1 text-center md:text-left animate-slide-up">
+                <p class="text-violet-300 text-sm md:text-base font-semibold uppercase tracking-widest mb-4">15 — 17 Agustus 2026 • Jakarta</p>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+                    The Future of Technology
+                </h1>
+                <p class="text-lg text-violet-100 mb-6 max-w-md">
+                    3 hari konferensi teknologi terdepan dengan pembicara internasional, workshop interaktif, dan networking event.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button class="btn-event">Daftar Sekarang</button>
+                    <a href="#schedule" class="btn-event bg-violet-600 text-white hover:bg-violet-700">Lihat Jadwal</a>
+                </div>
+            </div>
+
+            <!-- Hero Visual -->
+            <div class="flex-1 flex justify-center">
+                <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-3xl rotate-6 shadow-2xl shadow-violet-500/30"></div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="text-center mt-8">
+            <span class="inline-block animate-bounce text-white/50 text-2xl">↓</span>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="py-16 md:py-20 px-4 md:px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">
+                Pembicara
+            </h2>
+            <p class="text-gray-600 text-center max-w-xl mx-auto mb-12">
+                Temui para ahli dan visioner industri teknologi from terkemuka di dunia.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Speaker 1 -->
+                <div class="group bg-white rounded-xl p-6 shadow-md text-center hover:-translate-y-2 hover:shadow-xl transition duration-300">
+                    <div class="w-20 h-20 bg-violet-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl group-hover:rotate-6 group-hover:scale-110 transition duration-300">
+                        👩‍💻
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Sarah Chen</h3>
+                    <p class="text-xs text-gray-400 mt-1">AI/ML Expert, OpenAI</p>
+                </div>
+
+                <!-- Speaker 2 -->
+                <div class="group bg-white rounded-xl p-6 shadow-md text-center hover:-translate-y-2 hover:shadow-xl transition duration-300">
+                    <div class="w-20 h-20 bg-emerald-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl group-hover:rotate-6 group-hover:scale-110 transition duration-300">
+                        👨‍🔬
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Budi Santoso</h3>
+                    <p class="text-xs text-gray-400 mt-1">Cloud Architect, AWS</p>
+                </div>
+
+                <!-- Speaker 3 -->
+                <div class="group bg-white rounded-xl p-6 shadow-md text-center hover:-translate-y-2 hover:shadow-xl transition duration-300">
+                    <div class="w-20 h-20 bg-amber-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl group-hover:rotate-6 group-hover:scale-110 transition duration-300">
+                        👩‍🎨
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Lisa Park</h3>
+                    <p class="text-xs text-gray-400 mt-1">Design Lead, Adobe</p>
+                </div>
+
+                <!-- Speaker 4 -->
+                <div class="group bg-white rounded-xl p-6 shadow-md text-center hover:-translate-y-2 hover:shadow-xl transition duration-300">
+                    <div class="w-20 h-20 bg-rose-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl group-hover:rotate-6 group-hover:scale-110 transition duration-300">
+                        👨‍💼
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Andi Wijaya</h3>
+                    <p class="text-xs text-gray-400 mt-1">CEO, SecureNusa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="bg-violet-900 py-20 md:py-24 px-4 md:px-6 skew-y-2">
+        <div class="-skew-y-2">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-white text-center mb-3">
+                    Jadwal Event
+                </h2>
+                <p class="text-violet-100 text-center max-w-xl mx-auto mb-12">
+                    Lihat rangkaian acara selama 3 hari penuh dengan pembicara, workshop, dan networking.
+                </p>
+
+                <div class="flex flex-col md:flex-row gap-6">
+                    <!-- Day 1 -->
+                    <div class="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                        <h3 class="text-lg font-bold text-white mb-4">Hari 1 — 15 Agustus</h3>
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-violet-400 pl-4">
+                                <p class="text-sm text-violet-200 font-semibold">09:00 — 10:00</p>
+                                <p class="text-white">Opening Keynote</p>
+                            </div>
+                            <div class="border-l-4 border-violet-400 pl-4">
+                                <p class="text-sm text-violet-200 font-semibold">10:30 — 12:00</p>
+                                <p class="text-white">Workshop: AI & Machine Learning</p>
+                            </div>
+                            <div class="border-l-4 border-violet-400 pl-4">
+                                <p class="text-sm text-violet-200 font-semibold">13:00 — 14:00</p>
+                                <p class="text-white">Lunch & Networking</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                        <h3 class="text-lg font-bold text-white mb-4">Hari 2 — 16 Agustus</h3>
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-emerald-400 pl-4">
+                                <p class="text-sm text-emerald-200 font-semibold">09:00 — 10:30</p>
+                                <p class="text-white">Cloud Infrastructure Panel</p>
+                            </div>
+                            <div class="border-l-4 border-emerald-400 pl-4">
+                                <p class="text-sm text-emerald-200 font-semibold">11:00 — 12:30</p>
+                                <p class="text-white">Workshop: DevOps Best Practices</p>
+                            </div>
+                            <div class="border-l-4 border-emerald-400 pl-4">
+                                <p class="text-sm text-emerald-200 font-semibold">14:00 — 15:30</p>
+                                <p class="text-white">Lightning Talks</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                        <h3 class="text-lg font-bold text-white mb-4">Hari 3 — 17 Agustus</h3>
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-amber-400 pl-4">
+                                <p class="text-sm text-amber-200 font-semibold">09:00 — 11:00</p>
+                                <p class="text-white">Hackathon Kick-off</p>
+                            </div>
+                            <div class="border-l-4 border-amber-400 pl-4">
+                                <p class="text-sm text-amber-200 font-semibold">11:30 — 16:00</p>
+                                <p class="text-white">Hackathon Session</p>
+                            </div>
+                            <div class="border-l-4 border-amber-400 pl-4">
+                                <p class="text-sm text-amber-200 font-semibold">16:30 — 18:00</p>
+                                <p class="text-white">Awards & Closing Ceremony</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="py-16 md:py-20 px-4 md:px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">
+                Sponsor Kami
+            </h2>
+            <p class="text-gray-600 text-center max-w-xl mx-auto mb-12">
+                Dukungan dari perusahaan-perusahaan teknologi terkemuka di Indonesia.
+            </p>
+
+            <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 cursor-grab active:cursor-grabbing">
+                <div class="snap-center shrink-0 w-48 h-24 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 font-bold hover:scale-105 transition duration-300">Sponsor 1</div>
+                <div class="snap-center shrink-0 w-48 h-24 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 font-bold hover:scale-105 transition duration-300">Sponsor 2</div>
+                <div class="snap-center shrink-0 w-48 h-24 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 font-bold hover:scale-105 transition duration-300">Sponsor 3</div>
+                <div class="snap-center shrink-0 w-48 h-24 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 font-bold hover:scale-105 transition duration-300">Sponsor 4</div>
+                <div class="snap-center shrink-0 w-48 h-24 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 font-bold hover:scale-105 transition duration-300">Sponsor 5</div>
+                <div class="snap-center shrink-0 w-48 h-24 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 font-bold hover:scale-105 transition duration-300">Sponsor 6</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="bg-gray-50 py-16 md:py-20 px-4 md:px-6">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">
+                Daftar Sekarang
+            </h2>
+            <p class="text-gray-600 text-center mb-8">
+                Jangan lewatkan kesempatan untuk belajar langsung dari para ahli industri.
+            </p>
+
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+                <form class="space-y-5">
+                    <!-- Name Input -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                        <input type="text" placeholder="Masukkan nama Anda..."
+                            class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 placeholder-gray-400 caret-violet-500 focus:outline-none focus:border-violet-500 transition duration-200">
+                    </div>
+
+                    <!-- Email Input -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" placeholder="Masukkan email Anda..."
+                            class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 placeholder-gray-400 caret-violet-500 focus:outline-none focus:border-violet-500 transition duration-200">
+                    </div>
+
+                    <!-- Workshop Selection -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Pilih Workshop</label>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="ai" class="w-4 h-4 accent-violet-500">
+                                <label for="ai" class="text-sm text-gray-700 ml-2">AI & Machine Learning</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="cloud" class="w-4 h-4 accent-violet-500">
+                                <label for="cloud" class="text-sm text-gray-700 ml-2">Cloud Infrastructure</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="ux" class="w-4 h-4 accent-violet-500">
+                                <label for="ux" class="text-sm text-gray-700 ml-2">UI/UX Design</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message Textarea -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Pesan (Opsional)</label>
+                        <textarea rows="3" placeholder="Tuliskan pesan atau pertanyaan Anda..."
+                            class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-900 placeholder-gray-400 caret-violet-500 resize-y focus:outline-none focus:border-violet-500 transition duration-200"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="button"
+                        class="w-full bg-violet-600 text-white font-semibold py-3 rounded-lg cursor-not-allowed pointer-events-none flex items-center justify-center gap-2">
+                        <svg class="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                        </svg>
+                        Mendaftar...
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 px-4 md:px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-3">TechFest 2026</h3>
+                    <p class="text-sm text-gray-400">
+                        Konferensi teknologi terbesar di Asia Tenggara dengan ribuan peserta dan pembicara internasional.
+                    </p>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-3">Quick Links</h3>
+                    <div class="space-y-1 text-sm text-gray-400">
+                        <p><a href="#speakers" class="hover:text-white">Pembicara</a></p>
+                        <p><a href="#schedule" class="hover:text-white">Jadwal</a></p>
+                        <p><a href="#sponsors" class="hover:text-white">Sponsor</a></p>
+                        <p><a href="#register" class="hover:text-white">Daftar</a></p>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-3">Venue</h3>
+                    <div class="text-sm text-gray-400 space-y-1">
+                        <p>Jakarta International Expo</p>
+                        <p>Jl. Pameran No. 1, Jakarta</p>
+                        <p>Indonesia</p>
+                    </div>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-3">Contact</h3>
+                    <div class="text-sm text-gray-400 space-y-1">
+                        <p>Email: info@techfest2026.id</p>
+                        <p>Phone: +62 21 1234 5678</p>
+                        <p>Follow us: @techfest2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-8 text-center select-none">
+                <p class="text-sm text-white opacity-40">2026 TechFest. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

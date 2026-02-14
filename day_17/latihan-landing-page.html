@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodeKu - Belajar Ngoding Jadi Mudah</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        /* langkah 4–11 di sini */
+        @theme {
+    --font-heading: "Poppins", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --color-kodu-50: #f0fdfa;
+    --color-kodu-100: #ccfbf1;
+    --color-kodu-200: #99f6e4;
+    --color-kodu-300: #5eead4;
+    --color-kodu-400: #2dd4bf;
+    --color-kodu-500: #14b8a6;
+    --color-kodu-600: #0d9488;
+    --color-kodu-700: #0f766e;
+    --color-kodu-800: #115e59;
+    --color-kodu-900: #134e4a;
+    --color-kodu-950: #042f2e;
+}
+@layer base {
+    h1 {
+        @apply text-4xl font-bold text-gray-900 mb-4;
+    }
+    h2 {
+    @apply text-2xl font-semibold text-gray-800 mb-3;
+}
+p {
+    @apply text-gray-600 leading-relaxed;
+}
+}
+@layer components {
+    .btn-brand {
+        @apply bg-kodu-500 text-white px-6 py-3 rounded-lg font-heading font-semibold
+               hover:bg-kodu-600 active:scale-95 transition duration-200;
+    }
+    .btn-outline {
+    @apply border-2 border-kodu-500 text-kodu-600 px-6 py-3 rounded-lg font-heading font-semibold
+           hover:bg-kodu-500 hover:text-white active:scale-95 transition duration-200;
+}
+}
+@utility text-shadow-hero {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+    </style>
+</head>
+<body class="font-body bg-white">
+    <!-- langkah selanjutnya di sini -->
+    <nav class="bg-white shadow-xs">
+    <!-- langkah selanjutnya di sini -->
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                    <!-- langkah selanjutnya di sini -->
+                <a class="font-heading text-xl font-bold text-kodu-600">KodeKu</a>
+                <div class="flex gap-6">
+                    <a class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Fitur</a>
+                    <a class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Harga</a>
+                    <a class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="bg-kodu-50 py-20 px-4">
+    <!-- langkah selanjutnya di sini -->
+        <div class="max-w-3xl mx-auto text-center">
+            <!-- langkah selanjutnya di sini -->
+            <h1 class="text-5xl text-kodu-900 text-shadow-hero mb-4">Belajar Ngoding Jadi Mudah</h1>
+            <p class="text-xl mb-8">
+                KodeKu membantu kamu belajar programming dari nol dengan cara
+                yang menyenangkan dan terstruktur.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a class="btn-brand">Mulai Belajar</a>
+                <a class="btn-outline">Lihat Fitur</a>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 px-4">
+    <!-- langkah selanjutnya di sini -->
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-center mb-3">Kenapa KodeKu?</h2>
+            <p class="text-center max-w-xl mx-auto mb-12">
+                Platform belajar yang dirancang untuk membuat perjalanan coding
+                kamu lebih mudah dan menyenangkan.
+            </p>
+        </div>
+        <div class="grid grid-cols-3 gap-8">
+            <!-- langkah selanjutnya di sini -->
+            <div class="group bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
+                <div class="w-12 h-12 bg-kodu-100 rounded-lg flex items-center justify-center mb-4">🎯</div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-kodu-600 transition duration-300">
+                    Kurikulum Terarah
+                </h3>
+                <p class="text-sm text-gray-500 group-hover:text-gray-700 transition duration-300">
+                    Tidak perlu bingung harus belajar apa. Ikuti jalur belajar yang sudah tersusun rapi.
+                </p>
+            </div>
+            <div class="group bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">💻</div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-kodu-600 transition duration-300">
+                    Praktik Langsung
+                </h3>
+                <p class="text-sm text-gray-500 group-hover:text-gray-700 transition duration-300">
+                    Belajar sambil praktik langsung. Setiap materi dilengkapi latihan interaktif.
+                </p>
+            </div>
+            <div class="group bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">🤝</div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-kodu-600 transition duration-300">
+                    Komunitas Aktif
+                </h3>
+                <p class="text-sm text-gray-500 group-hover:text-gray-700 transition duration-300">
+                    Bergabung dengan komunitas learner yang saling membantu dan berbagi pengalaman.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
