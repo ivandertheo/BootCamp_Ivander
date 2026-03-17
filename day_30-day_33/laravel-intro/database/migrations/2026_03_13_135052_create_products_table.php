@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id()->primary();
-            $table->date('created_at');
+            $table->id();
+            $table->timestamps(); // WAJIB
             $table->string('name');
             $table->integer('price');
             $table->integer('stock');
