@@ -1,0 +1,19 @@
+# 🚀 Instruksi Deploy Project — Siswa
+
+  ## 1. Koneksi ke Server
+  ssh studentXX@38.47.180.195
+  # password: [lihat tabel dari instruktur]
+
+  ## 2. Setup Git Remote (Pertama Kali)
+  cd ~/project-kamu
+  git remote add deploy ssh://studentXX@38.47.180.195/home/studentXX/ap
+  p.git
+  git push deploy main
+
+  ## 3. Update Kode
+  git add .
+  git commit -m "update project"
+  git push deploy main
+
+  ## 4. Lihat Hasil
+  Buka: http://38.47.180.195/studentXX/
